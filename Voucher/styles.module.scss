@@ -1,0 +1,115 @@
+* {
+    padding: 0;
+    margin: 0;
+    border: none;
+}
+
+.backgroundImage {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('https://raw.githubusercontent.com/danghiep0122/back-up-DOM-14/main/asset/black-zone.png');
+    background-size: cover;
+}
+
+.boxBorder {
+    max-width: 960px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    margin-top: 12rem;
+    width: calc(100% * 2/3);
+    height: auto;
+    border: 1px #fff solid;
+    border-radius: 1rem;
+    padding: .8rem;
+}
+
+.contentWrapper {
+    background-color: #f2f4f8;
+    border-radius: .6rem;
+    padding: 2rem 4rem;
+
+    & h4 {
+        margin: 1rem 0;
+        font-size: 1rem;
+    }
+}
+
+.inputWrapper {
+    margin: 3rem 0;
+
+    & input {
+        font-size: 1rem;
+        padding: 1rem;
+        color: #495057;
+        font-weight: 600;
+        border-bottom: 1px solid #333;
+        border-top-left-radius: .6rem;
+        transition: all ease .2s;
+    }
+    
+    & input:focus {
+        border-color: transparent;
+        outline: #80bdff 4px solid;
+    }
+
+    & button {
+        font-size: 1rem;
+        padding: 1rem 2rem;
+        border-top-right-radius: .6rem;
+        background-color: #0078ae;
+        color: #fff;
+        font-weight: 600;
+        cursor: pointer;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .backgroundImage {
+        background-image: none;
+        background-color: #f2f4f8;
+    }
+    
+    .boxBorder {
+        border: none;
+        transform: none;
+        width: 100%;
+        padding: 1rem 0;
+        margin: 3rem 0;
+    }
+
+    
+    .contentWrapper {
+        padding: 0;
+        margin: 0 1rem;
+
+        & h4 {
+            font-weight: 500;
+        }
+    }
+
+
+    .inputWrapper {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+
+        & input {
+            padding: .4rem;
+            font-size: .8rem;
+            flex: 1;
+        }
+    }
+    
+}
+
+@media screen and (min-width: 576px) and (max-width: 767px) {
+    .boxBorder {
+        margin: 5rem 0;
+    }
+
+    .inputWrapper input {
+        font-size: 1rem;
+        padding: 1rem;
+    }
+}
